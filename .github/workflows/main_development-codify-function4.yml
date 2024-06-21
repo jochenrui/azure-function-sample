@@ -28,8 +28,8 @@ jobs:
 
       - name: Install poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python -
-          export PATH=$PATH:$HOME/.poetry/bin
+          pip3.11 install pipx
+          pipx install poetry
           poetry config virtualenvs.in-project true
 
       - name: Install dependencies
